@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Domain", "..\Sma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Data", "..\SmartNotes.Data\SmartNotes.Data.csproj", "{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Services", "..\SmartNotes.Services\SmartNotes.Services.csproj", "{F9545A09-9B8B-4548-99AF-E16DD43D763D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9545A09-9B8B-4548-99AF-E16DD43D763D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9545A09-9B8B-4548-99AF-E16DD43D763D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9545A09-9B8B-4548-99AF-E16DD43D763D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9545A09-9B8B-4548-99AF-E16DD43D763D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
