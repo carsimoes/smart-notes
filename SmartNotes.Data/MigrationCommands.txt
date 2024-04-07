@@ -1,2 +1,2 @@
-﻿Add-Migration Rating
+﻿Add-Migration _Name_
 Update-Database
