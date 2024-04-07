@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes", "SmartNotes.csproj", "{BE6CA10A-43CB-4718-A32B-ACFDC8C302A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Domain", "..\SmartNotes.Domain\SmartNotes.Domain.csproj", "{00E850E0-4023-4B11-BF51-86D4A719C882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Data", "..\SmartNotes.Data\SmartNotes.Data.csproj", "{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{BE6CA10A-43CB-4718-A32B-ACFDC8C302A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE6CA10A-43CB-4718-A32B-ACFDC8C302A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE6CA10A-43CB-4718-A32B-ACFDC8C302A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E850E0-4023-4B11-BF51-86D4A719C882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E850E0-4023-4B11-BF51-86D4A719C882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E850E0-4023-4B11-BF51-86D4A719C882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E850E0-4023-4B11-BF51-86D4A719C882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
