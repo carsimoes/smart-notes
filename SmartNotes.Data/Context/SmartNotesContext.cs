@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using SmartNotes.Domain.Models;
+using System.Configuration;
 
 namespace SmartNotes.Data.Context
 {
@@ -7,9 +9,17 @@ namespace SmartNotes.Data.Context
     {
         public DbSet<Note> Note { get; set; }
 
+        IConfiguration appConfig;
+
+        public SmartNotesContext(IConfiguration config)
+        {
+            appConfig = config;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=SmartNotes;user=root;password=ramones");
+            var cn = appConfig.GetConnectionString("SmartNotesDb");
+            optionsBuilder.UseMySQL(cn);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

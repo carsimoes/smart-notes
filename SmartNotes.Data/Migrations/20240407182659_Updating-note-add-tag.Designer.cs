@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartNotes.Data.Context;
 
@@ -10,9 +11,11 @@ using SmartNotes.Data.Context;
 namespace SmartNotes.Data.Migrations
 {
     [DbContext(typeof(SmartNotesContext))]
-    partial class SmartNotesContextModelSnapshot : ModelSnapshot
+    [Migration("20240407182659_Updating-note-add-tag")]
+    partial class Updatingnoteaddtag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
