@@ -1,4 +1,4 @@
-using SmartNotes.Services;
+using SmartNotes.Services.Note;
 
 namespace FirstCoreWebApplication
 {
