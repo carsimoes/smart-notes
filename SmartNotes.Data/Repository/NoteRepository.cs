@@ -1,6 +1,6 @@
-﻿using SmartNotes.Domain;
+﻿using SmartNotes.Domain.Models;
 
-namespace SmartNotes.Data
+namespace SmartNotes.Data.Repository
 {
     public class NoteRepository
     {

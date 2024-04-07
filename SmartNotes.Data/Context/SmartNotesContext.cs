@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SmartNotes.Domain;
+using SmartNotes.Domain.Models;
 
-namespace SmartNotes.Data
+namespace SmartNotes.Data.Context
 {
     public class SmartNotesContext : DbContext
     {

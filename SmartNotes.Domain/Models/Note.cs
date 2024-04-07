@@ -1,4 +1,4 @@
-﻿namespace SmartNotes.Domain
+﻿namespace SmartNotes.Domain.Models
 {
     public class Note
     {
