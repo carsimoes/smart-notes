@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="xunit.assert" Version="2.7.0" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SmartNotes.Api\SmartNotes.Api.csproj" />
+    <ProjectReference Include="..\SmartNotes.Data\SmartNotes.Data.csproj" />
+    <ProjectReference Include="..\SmartNotes.Services\SmartNotes.Services.csproj" />
   </ItemGroup>
 
 </Project>

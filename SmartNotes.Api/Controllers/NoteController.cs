@@ -1,22 +1,60 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SmartNotes.Data.Repository;
 using SmartNotes.Domain.Models;
+using SmartNotes.Services.Note;
 
 namespace SmartNotes.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class NoteController
+    public class NoteController : Controller
     {
-        [HttpGet(Name = "GetNotes")]
-        public IEnumerable<Note> Get()
+        private readonly INoteService noteService;
+
+        public NoteController(INoteService noteService)
         {
-            return Enumerable.Range(1, 5).Select(index => new Note
+            noteService = noteService;
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var items = noteService.GetAll();
+            return Ok(items);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var item = noteService.GetById(id);
+            if (item == null)
             {
-                Id = 1,
-                Content = "Test",
-                Title = "Title"
-            })
-            .ToArray();
+                return NotFound();
+            }
+            return Ok(item);
+        }
+
+        //[HttpPost]
+        //public IActionResult Post([FromBody] ShoppingItem value)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+        //    var item = noteService.Add(value);
+        //    return CreatedAtAction("Get", new { id = item.Id }, item);
+        //}
+
+        [HttpDelete("{id}")]
+        public IActionResult Remove(int id)
+        {
+            var existingItem = noteService.GetById(id);
+            if (existingItem == null)
+            {
+                return NotFound();
+            }
+            noteService.Remove(id);
+            return NoContent();
         }
     }
 }

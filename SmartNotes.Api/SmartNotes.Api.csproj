@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SmartNotes.Data\SmartNotes.Data.csproj" />
     <ProjectReference Include="..\SmartNotes.Domain\SmartNotes.Domain.csproj" />
+    <ProjectReference Include="..\SmartNotes.Services\SmartNotes.Services.csproj" />
   </ItemGroup>
 
 </Project>
