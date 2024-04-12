@@ -16,4 +16,8 @@
     <ProjectReference Include="..\SmartNotes.Services\SmartNotes.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
 </Project>

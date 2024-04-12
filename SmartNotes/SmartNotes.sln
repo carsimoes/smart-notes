@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Data", "..\Smart
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Services", "..\SmartNotes.Services\SmartNotes.Services.csproj", "{F9545A09-9B8B-4548-99AF-E16DD43D763D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Tests", "..\SmartNotes.Tests\SmartNotes.Tests.csproj", "{9EA842F8-C17B-473D-AD81-6DFE77E772DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Api", "..\SmartNotes.Api\SmartNotes.Api.csproj", "{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Api", "..\SmartNotes.Api\SmartNotes.Api.csproj", "{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Tests", "..\SmartNotes.Tests\SmartNotes.Tests.csproj", "{116E1437-DB36-42AE-9DFE-B99300BCB2D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{F9545A09-9B8B-4548-99AF-E16DD43D763D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9545A09-9B8B-4548-99AF-E16DD43D763D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9545A09-9B8B-4548-99AF-E16DD43D763D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9EA842F8-C17B-473D-AD81-6DFE77E772DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9EA842F8-C17B-473D-AD81-6DFE77E772DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9EA842F8-C17B-473D-AD81-6DFE77E772DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9EA842F8-C17B-473D-AD81-6DFE77E772DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116E1437-DB36-42AE-9DFE-B99300BCB2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116E1437-DB36-42AE-9DFE-B99300BCB2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116E1437-DB36-42AE-9DFE-B99300BCB2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116E1437-DB36-42AE-9DFE-B99300BCB2D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
