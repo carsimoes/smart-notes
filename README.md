@@ -5,7 +5,7 @@ This project is an annotation system, it initially serves as a proof of concept 
 In a second stage, there will be integrations with modules that will implement data science and artificial intelligence techniques.
 
 
-# Topics covered so far.
+# Topics covered so far
 - .NET Core 8 API
 - Dependency injection
 - Repository Pattern
