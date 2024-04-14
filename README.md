@@ -10,3 +10,4 @@
 - MySQL
 - EF Core
 - Code first
+- Facade Pattern: single responsability principle (SRP)
