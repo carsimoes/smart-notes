@@ -6,3 +6,6 @@
 - Unit Tests
 - Driven domain design
 - Solid
+- Docker
+- MySQL
+- EF Core
