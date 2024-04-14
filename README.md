@@ -9,3 +9,4 @@
 - Docker
 - MySQL
 - EF Core
+- Code first
