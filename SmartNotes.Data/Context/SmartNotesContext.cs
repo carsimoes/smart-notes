@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using SmartNotes.Domain.Models;
+using SmartNotes.Domain.NoteFeature.Models;
 using System.Configuration;
 
 namespace SmartNotes.Data.Context

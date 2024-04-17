@@ -1,4 +1,4 @@
-﻿
+﻿using SmartNotes.Domain.NoteFeature.Interfaces;
 
 namespace SmartNotes.Services.Note
 {
@@ -9,11 +9,11 @@ namespace SmartNotes.Services.Note
             
         }
 
-        public IEnumerable<Domain.Models.Note> GetAll()
+        public IEnumerable<Domain.NoteFeature.Models.Note> GetAll()
         {
-            return new List<Domain.Models.Note>()
+            return new List<Domain.NoteFeature.Models.Note>()
             {
-                new Domain.Models.Note()
+                new SmartNotes.Domain.NoteFeature.Models.Note()
                 {
                     Id = 1,
                     Content = "Content"
@@ -21,7 +21,7 @@ namespace SmartNotes.Services.Note
             };
         }
 
-        public Domain.Models.Note GetById(int id)
+        public Domain.NoteFeature.Models.Note GetById(int id)
         {
             throw new NotImplementedException();
         }

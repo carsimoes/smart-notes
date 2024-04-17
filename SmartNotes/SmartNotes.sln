@@ -9,11 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Domain", "..\Sma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Data", "..\SmartNotes.Data\SmartNotes.Data.csproj", "{1655DE48-5E2E-4E5A-B37B-1AC6E713D023}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Services", "..\SmartNotes.Services\SmartNotes.Services.csproj", "{F9545A09-9B8B-4548-99AF-E16DD43D763D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Application", "..\SmartNotes.Services\SmartNotes.Application.csproj", "{F9545A09-9B8B-4548-99AF-E16DD43D763D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Api", "..\SmartNotes.Api\SmartNotes.Api.csproj", "{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNotes.Tests", "..\SmartNotes.Tests\SmartNotes.Tests.csproj", "{116E1437-DB36-42AE-9DFE-B99300BCB2D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNotes.Tests", "..\SmartNotes.Tests\SmartNotes.Tests.csproj", "{116E1437-DB36-42AE-9DFE-B99300BCB2D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B07DFD39-197C-448D-9164-8CBA923E61EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A1A7D7A2-D0DB-411C-9BA8-19037BAE9619}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{5E7179EB-3149-4AA4-BD00-FC8168157A9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{D6041CC6-21FC-4B38-87C5-843003F1186B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{093BED80-1B7D-49F9-94A2-746E9BFD823F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +58,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE6CA10A-43CB-4718-A32B-ACFDC8C302A6} = {5E7179EB-3149-4AA4-BD00-FC8168157A9A}
+		{00E850E0-4023-4B11-BF51-86D4A719C882} = {A1A7D7A2-D0DB-411C-9BA8-19037BAE9619}
+		{1655DE48-5E2E-4E5A-B37B-1AC6E713D023} = {B07DFD39-197C-448D-9164-8CBA923E61EB}
+		{F9545A09-9B8B-4548-99AF-E16DD43D763D} = {D6041CC6-21FC-4B38-87C5-843003F1186B}
+		{D9F42A23-18C5-4D51-8A6F-2AB9E7A4AE0D} = {5E7179EB-3149-4AA4-BD00-FC8168157A9A}
+		{116E1437-DB36-42AE-9DFE-B99300BCB2D8} = {093BED80-1B7D-49F9-94A2-746E9BFD823F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {675BAC59-2FF2-4BE6-8373-EA3663683D50}

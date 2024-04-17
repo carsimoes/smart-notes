@@ -1,3 +1,4 @@
+using SmartNotes.Domain.NoteFeature.Interfaces;
 using SmartNotes.Services.Note;
 
 namespace FirstCoreWebApplication
@@ -18,7 +19,7 @@ namespace FirstCoreWebApplication
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddKeyedSingleton<INoteService, NoteService>("noteService");
+            //builder.Services.AddKeyedSingleton<INoteService, NoteService>("noteService");
 
             var app = builder.Build();
 

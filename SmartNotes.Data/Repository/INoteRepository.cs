@@ -1,4 +1,4 @@
-﻿using SmartNotes.Domain.Models;
+﻿using SmartNotes.Domain.NoteFeature.Models;
 
 namespace SmartNotes.Data.Repository
 {

@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SmartNotes.Api\SmartNotes.Api.csproj" />
+    <ProjectReference Include="..\SmartNotes\SmartNotes.csproj" />
   </ItemGroup>
 
   <ItemGroup>

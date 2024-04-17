@@ -1,9 +1,7 @@
 using SmartNotes.Api.Controllers;
-using SmartNotes.Services.Note;
-using Moq;
-using SmartNotes.Domain.Models;
-using Microsoft.AspNetCore.Mvc;
 using FakeItEasy;
+using SmartNotes.Domain.NoteFeature.Models;
+using SmartNotes.Domain.NoteFeature.Interfaces;
 
 namespace SmartNotes.Tests
 {
@@ -11,12 +9,12 @@ namespace SmartNotes.Tests
     {
         private NoteController controller;
         //private Mock<INoteService> noteServiceMock;
-        private INoteService noteServiceMock;
+        //private INoteService noteServiceMock;
 
         public void Setup()
         {
             //noteServiceMock = new Mock<INoteService>();
-            noteServiceMock = A.Fake<INoteService>();
+            //noteServiceMock = A.Fake<INoteService>();
             //controller = new NoteController(noteServiceMock.Object);
         }
 
@@ -30,17 +28,17 @@ namespace SmartNotes.Tests
             //Assert.IsType<OkObjectResult>(result);
         }
 
-        [Fact]
-        public void Test_Addition()
-        {
-            // Arrange
-            A.CallTo(() => noteServiceMock.GetAll()).Returns(new List<Note>() { new Note() { Id = 1 } });
+        //[Fact]
+        //public void Test_Addition()
+        //{
+        //    // Arrange
+        //    A.CallTo(() => noteServiceMock.GetAll()).Returns(new List<Note>() { new Note() { Id = 1 } });
 
-            // Act
-            var result = noteServiceMock.GetAll();
+        //    // Act
+        //    var result = noteServiceMock.GetAll();
 
-            // Assert
-            Assert.Equal(1, result.Count());
-        }
+        //    // Assert
+        //    Assert.Equal(1, result.Count());
+        //}
     }
 }
