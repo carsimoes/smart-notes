@@ -1,28 +1,46 @@
 using SmartNotes.Api.Controllers;
 using SmartNotes.Services.Note;
 using Moq;
-using NUnit.Framework;
+using SmartNotes.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
+using FakeItEasy;
 
 namespace SmartNotes.Tests
 {
     public class NotesTests
     {
         private NoteController controller;
-        private Mock<INoteService> noteServiceMock;
+        //private Mock<INoteService> noteServiceMock;
+        private INoteService noteServiceMock;
 
-        [SetUp]
         public void Setup()
         {
-            noteServiceMock = new Mock<INoteService>();
-            controller = new NoteController(noteServiceMock.Object);
+            //noteServiceMock = new Mock<INoteService>();
+            noteServiceMock = A.Fake<INoteService>();
+            //controller = new NoteController(noteServiceMock.Object);
         }
 
         [Fact]
-        public void Test1()
+        public void Get_ReturnsOkResult()
         {
-            //noteServiceMock.Setup(p => p.GetAll(It.IsAny<double>(), cardMock.Object)).Returns(true);
+            //noteServiceMock.Setup(service => service.GetAll()).Returns(new List<Note>());
 
-            Xunit.Assert.Equal(5, 1);
+            //var result = controller.Get();
+
+            //Assert.IsType<OkObjectResult>(result);
+        }
+
+        [Fact]
+        public void Test_Addition()
+        {
+            // Arrange
+            A.CallTo(() => noteServiceMock.GetAll()).Returns(new List<Note>() { new Note() { Id = 1 } });
+
+            // Act
+            var result = noteServiceMock.GetAll();
+
+            // Assert
+            Assert.Equal(1, result.Count());
         }
     }
 }
