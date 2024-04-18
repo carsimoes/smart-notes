@@ -20,5 +20,10 @@ In a second stage, there will be integrations with modules that will implement d
 
 # Notes:
 
-![image](https://github.com/carsimoes/smart-notes/assets/4956055/f13bf890-dda7-4aa6-bb62-120727227f10)
 
+About patterns in this project:
+
+- Facade:
+  
+![image](https://github.com/carsimoes/smart-notes/assets/4956055/f13bf890-dda7-4aa6-bb62-120727227f10)
+![image](https://github.com/carsimoes/smart-notes/assets/4956055/9009670e-6313-44cf-8786-8425c10654db)
