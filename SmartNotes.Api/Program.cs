@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using SmartNotes.Domain.NoteFeature.Interfaces;
 using SmartNotes.Services.Note;
 
@@ -10,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddScoped<INoteService, NoteService>();
+builder.Services.AddScoped<INoteService, NoteService>();
 
 var app = builder.Build();
 

@@ -2,9 +2,9 @@
 {
     public interface INoteService
     {
-        IEnumerable<Domain.NoteFeature.Models.Note> GetAll();
+        IEnumerable<Models.Note> GetAll();
 
-        Domain.NoteFeature.Models.Note GetById(int id);
+        Models.Note GetById(int id);
 
         void Remove(int id);
     }

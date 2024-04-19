@@ -1,44 +1,33 @@
+using Moq;
 using SmartNotes.Api.Controllers;
-using FakeItEasy;
-using SmartNotes.Domain.NoteFeature.Models;
 using SmartNotes.Domain.NoteFeature.Interfaces;
 
 namespace SmartNotes.Tests
 {
     public class NotesTests
     {
-        private NoteController controller;
-        //private Mock<INoteService> noteServiceMock;
-        //private INoteService noteServiceMock;
 
-        public void Setup()
-        {
-            //noteServiceMock = new Mock<INoteService>();
-            //noteServiceMock = A.Fake<INoteService>();
-            //controller = new NoteController(noteServiceMock.Object);
-        }
+        public Mock<INoteService> noteServiceMock = new Mock<INoteService>();
 
         [Fact]
-        public void Get_ReturnsOkResult()
+        public async void GetAllNotesTest()
         {
-            //noteServiceMock.Setup(service => service.GetAll()).Returns(new List<Note>());
+            noteServiceMock.Setup(x => x.GetAll()).Returns(
+                    new List<Domain.NoteFeature.Models.Note>()
+                    {
+                            new Domain.NoteFeature.Models.Note()
+                            {
+                                Id = 1,
+                                Content = "Content"
+                            }
+                    }
+              );
 
-            //var result = controller.Get();
+            NoteController controller = new NoteController(noteServiceMock.Object);
 
-            //Assert.IsType<OkObjectResult>(result);
+            var result = controller.Get();
+
+            Assert.NotNull(result);
         }
-
-        //[Fact]
-        //public void Test_Addition()
-        //{
-        //    // Arrange
-        //    A.CallTo(() => noteServiceMock.GetAll()).Returns(new List<Note>() { new Note() { Id = 1 } });
-
-        //    // Act
-        //    var result = noteServiceMock.GetAll();
-
-        //    // Assert
-        //    Assert.Equal(1, result.Count());
-        //}
     }
 }
