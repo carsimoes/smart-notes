@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using SmartNotes.Domain.NoteFeature.Interfaces;
 
 namespace SmartNotes.Api.Controllers
@@ -8,15 +9,19 @@ namespace SmartNotes.Api.Controllers
     public class NoteController : Controller
     {
         private readonly INoteService _noteService;
+        private readonly IMapper _mapper;
 
-        public NoteController(INoteService noteService)
+        public NoteController(INoteService noteService, IMapper mapper)
         {
             _noteService = noteService;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
+            //var model = _mapper.Map<UserDto>(user);
+
             var items = _noteService.GetAll();
             return Ok(items);
         }

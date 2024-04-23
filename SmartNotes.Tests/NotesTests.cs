@@ -1,3 +1,4 @@
+using AutoMapper;
 using Moq;
 using SmartNotes.Api.Controllers;
 using SmartNotes.Domain.NoteFeature.Entities;
@@ -9,6 +10,7 @@ namespace SmartNotes.Tests
     {
 
         public Mock<INoteService> noteServiceMock = new Mock<INoteService>();
+        public Mock<IMapper> mapperMock = new Mock<IMapper>();
 
         [Fact]
         public async void GetAllNotesTest()
@@ -24,7 +26,7 @@ namespace SmartNotes.Tests
                     }
               );
 
-            NoteController controller = new NoteController(noteServiceMock.Object);
+            NoteController controller = new NoteController(noteServiceMock.Object, mapperMock.Object);
 
             var result = controller.Get();
 
