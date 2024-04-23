@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SmartNotes.CrossCutting\SmartNotes.CrossCutting.csproj" />
+    <Folder Include="Logging\" />
   </ItemGroup>
 
 </Project>

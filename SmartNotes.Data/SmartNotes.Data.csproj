@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SmartNotes.CrossCutting\SmartNotes.CrossCutting.csproj" />
     <ProjectReference Include="..\SmartNotes.Domain\SmartNotes.Domain.csproj" />
   </ItemGroup>
 
