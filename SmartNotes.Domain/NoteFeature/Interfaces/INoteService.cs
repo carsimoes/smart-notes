@@ -1,11 +1,15 @@
-﻿namespace SmartNotes.Domain.NoteFeature.Interfaces
+﻿using SmartNotes.Domain.NoteFeature.Entities;
+
+namespace SmartNotes.Domain.NoteFeature.Interfaces
 {
     public interface INoteService
     {
-        IEnumerable<Models.Note> GetAll();
+        IEnumerable<Note> GetAll();
 
-        Models.Note GetById(int id);
+        Note GetById(int id);
 
         void Remove(int id);
+
+        void Add(Note note);
     }
 }

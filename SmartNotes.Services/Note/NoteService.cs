@@ -1,19 +1,28 @@
-﻿using SmartNotes.Domain.NoteFeature.Interfaces;
+﻿using AutoMapper;
+using SmartNotes.Domain.NoteFeature.Interfaces;
+using SmartNotes.Domain.NoteFeature.Entities;
 
 namespace SmartNotes.Services.Note
 {
     public class NoteService : INoteService
     {
-        public NoteService()
+        private readonly IMapper _mapper;
+
+        public NoteService(IMapper mapper)
         {
-            
+            _mapper = mapper;
         }
 
-        public IEnumerable<Domain.NoteFeature.Models.Note> GetAll()
+        public void Add(Domain.NoteFeature.Entities.Note note)
         {
-            return new List<Domain.NoteFeature.Models.Note>()
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Domain.NoteFeature.Entities.Note> GetAll()
+        {
+            return new List<Domain.NoteFeature.Entities.Note>()
             {
-                new SmartNotes.Domain.NoteFeature.Models.Note()
+                new Domain.NoteFeature.Entities.Note()
                 {
                     Id = 1,
                     Content = "Content"
@@ -21,7 +30,7 @@ namespace SmartNotes.Services.Note
             };
         }
 
-        public Domain.NoteFeature.Models.Note GetById(int id)
+        public Domain.NoteFeature.Entities.Note GetById(int id)
         {
             throw new NotImplementedException();
         }

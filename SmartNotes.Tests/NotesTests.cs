@@ -1,5 +1,6 @@
 using Moq;
 using SmartNotes.Api.Controllers;
+using SmartNotes.Domain.NoteFeature.Entities;
 using SmartNotes.Domain.NoteFeature.Interfaces;
 
 namespace SmartNotes.Tests
@@ -13,9 +14,9 @@ namespace SmartNotes.Tests
         public async void GetAllNotesTest()
         {
             noteServiceMock.Setup(x => x.GetAll()).Returns(
-                    new List<Domain.NoteFeature.Models.Note>()
+                    new List<Note>()
                     {
-                            new Domain.NoteFeature.Models.Note()
+                            new()
                             {
                                 Id = 1,
                                 Content = "Content"

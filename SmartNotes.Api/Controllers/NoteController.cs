@@ -29,6 +29,7 @@ namespace SmartNotes.Api.Controllers
             {
                 return NotFound();
             }
+
             return Ok(item);
         }
 
@@ -52,6 +53,7 @@ namespace SmartNotes.Api.Controllers
                 return NotFound();
             }
             _noteService.Remove(id);
+
             return NoContent();
         }
     }
