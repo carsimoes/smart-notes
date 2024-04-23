@@ -17,6 +17,7 @@ In a second stage, there will be integrations with modules that will implement d
 - EF Core
 - Code first
 - Facade Pattern: single responsability principle (SRP)
+- Automapper
 
 # Notes:
 
