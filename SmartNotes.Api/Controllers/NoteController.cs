@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using SmartNotes.Application.Dto;
+using SmartNotes.Domain.NoteFeature.Entities;
 using SmartNotes.Domain.NoteFeature.Interfaces;
 
 namespace SmartNotes.Api.Controllers
@@ -20,8 +22,6 @@ namespace SmartNotes.Api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            //var model = _mapper.Map<UserDto>(user);
-
             var items = _noteService.GetAll();
             return Ok(items);
         }
@@ -38,16 +38,19 @@ namespace SmartNotes.Api.Controllers
             return Ok(item);
         }
 
-        //[HttpPost]
-        //public IActionResult Post([FromBody] ShoppingItem value)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-        //    var item = noteService.Add(value);
-        //    return CreatedAtAction("Get", new { id = item.Id }, item);
-        //}
+        [HttpPost]
+        public IActionResult Post([FromBody] NoteDto note)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var model = _mapper.Map<Note>(note);
+
+            var item = _noteService.Add(model);
+            return CreatedAtAction("Get", new { id = item.Id }, item);
+        }
 
         [HttpDelete("{id}")]
         public IActionResult Remove(int id)

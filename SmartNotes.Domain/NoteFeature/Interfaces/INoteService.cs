@@ -10,6 +10,6 @@ namespace SmartNotes.Domain.NoteFeature.Interfaces
 
         void Remove(int id);
 
-        void Add(Note note);
+        Note Add(Note note);
     }
 }

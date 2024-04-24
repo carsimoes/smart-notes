@@ -2,7 +2,7 @@
 using SmartNotes.Domain.NoteFeature.Interfaces;
 using SmartNotes.Domain.NoteFeature.Entities;
 
-namespace SmartNotes.Services.Note
+namespace SmartNotes.Application.Services.Note
 {
     public class NoteService : INoteService
     {
@@ -13,7 +13,7 @@ namespace SmartNotes.Services.Note
             _mapper = mapper;
         }
 
-        public void Add(Domain.NoteFeature.Entities.Note note)
+        public Domain.NoteFeature.Entities.Note Add(Domain.NoteFeature.Entities.Note note)
         {
             throw new NotImplementedException();
         }
