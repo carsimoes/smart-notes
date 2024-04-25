@@ -1,29 +1,37 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using SmartNotes.Domain.NoteFeature.Interfaces;
 
 namespace SmartNotes.Controllers
 {
     public class NoteController : Controller
     {
-        // GET: NoteController
+        private readonly INoteService _noteService;
+        private readonly IMapper _mapper;
+
+        public NoteController(INoteService noteService, IMapper mapper)
+        {
+            _noteService = noteService;
+            _mapper = mapper;
+        }
+
         public ActionResult Index()
         {
+            var items = _noteService.GetAll();
+
             return View();
         }
 
-        // GET: NoteController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: NoteController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: NoteController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -38,13 +46,11 @@ namespace SmartNotes.Controllers
             }
         }
 
-        // GET: NoteController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: NoteController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -59,13 +65,11 @@ namespace SmartNotes.Controllers
             }
         }
 
-        // GET: NoteController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: NoteController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

@@ -1,7 +1,6 @@
 using AutoMapper;
 using SmartNotes.Api.Mapping;
-using SmartNotes.Domain.NoteFeature.Interfaces;
-using SmartNotes.Services.Note;
+using SmartNotes.Common.DependencyInjection;
 
 namespace SmartNotes.Api
 {
@@ -14,8 +13,10 @@ namespace SmartNotes.Api
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<INoteService, NoteService>();
+            
             //builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            builder.Services.AddCustomDIs();
 
             var mapperConfig = new MapperConfiguration(mc =>
             {

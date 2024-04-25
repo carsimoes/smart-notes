@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SmartNotes.Common\SmartNotes.Common.csproj" />
     <ProjectReference Include="..\SmartNotes.CrossCutting\SmartNotes.CrossCutting.csproj" />
     <ProjectReference Include="..\SmartNotes.Data\SmartNotes.Data.csproj" />
     <ProjectReference Include="..\SmartNotes.Domain\SmartNotes.Domain.csproj" />

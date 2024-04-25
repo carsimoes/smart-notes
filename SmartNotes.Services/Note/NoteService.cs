@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using SmartNotes.Domain.NoteFeature.Interfaces;
-using SmartNotes.Domain.NoteFeature.Entities;
 
 namespace SmartNotes.Application.Services.Note
 {
